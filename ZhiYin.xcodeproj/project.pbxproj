@@ -11,6 +11,8 @@
 		D828C8DC296C25930017BF51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828C8DB296C25930017BF51 /* ContentView.swift */; };
 		D828C8DE296C25940017BF51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D828C8DD296C25940017BF51 /* Assets.xcassets */; };
 		D828C8E1296C25940017BF51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D828C8E0296C25940017BF51 /* Preview Assets.xcassets */; };
+		D83C2A18296C860900697CA3 /* ZYView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C2A17296C860900697CA3 /* ZYView.swift */; };
+		D83C2A1A296C863500697CA3 /* CpuUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C2A19296C863500697CA3 /* CpuUsage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		D828C8DD296C25940017BF51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D828C8E0296C25940017BF51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D828C8E2296C25940017BF51 /* ZhiYin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZhiYin.entitlements; sourceTree = "<group>"; };
+		D83C2A17296C860900697CA3 /* ZYView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZYView.swift; sourceTree = "<group>"; };
+		D83C2A19296C863500697CA3 /* CpuUsage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CpuUsage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +56,10 @@
 		D828C8D8296C25930017BF51 /* ZhiYin */ = {
 			isa = PBXGroup;
 			children = (
+				D83C2A19296C863500697CA3 /* CpuUsage.swift */,
 				D828C8D9296C25930017BF51 /* ZhiYinApp.swift */,
 				D828C8DB296C25930017BF51 /* ContentView.swift */,
+				D83C2A17296C860900697CA3 /* ZYView.swift */,
 				D828C8DD296C25940017BF51 /* Assets.xcassets */,
 				D828C8E2296C25940017BF51 /* ZhiYin.entitlements */,
 				D828C8DF296C25940017BF51 /* Preview Content */,
@@ -141,6 +147,8 @@
 			files = (
 				D828C8DC296C25930017BF51 /* ContentView.swift in Sources */,
 				D828C8DA296C25930017BF51 /* ZhiYinApp.swift in Sources */,
+				D83C2A1A296C863500697CA3 /* CpuUsage.swift in Sources */,
+				D83C2A18296C860900697CA3 /* ZYView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +282,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +310,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
