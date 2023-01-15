@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D828C8DA296C25930017BF51 /* ZhiYinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828C8D9296C25930017BF51 /* ZhiYinApp.swift */; };
-		D828C8DC296C25930017BF51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828C8DB296C25930017BF51 /* ContentView.swift */; };
 		D828C8DE296C25940017BF51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D828C8DD296C25940017BF51 /* Assets.xcassets */; };
 		D828C8E1296C25940017BF51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D828C8E0296C25940017BF51 /* Preview Assets.xcassets */; };
 		D83C2A18296C860900697CA3 /* ZYView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83C2A17296C860900697CA3 /* ZYView.swift */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		D828C8D6296C25930017BF51 /* ZhiYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D828C8D9296C25930017BF51 /* ZhiYinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhiYinApp.swift; sourceTree = "<group>"; };
-		D828C8DB296C25930017BF51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D828C8DD296C25940017BF51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D828C8E0296C25940017BF51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D828C8E2296C25940017BF51 /* ZhiYin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZhiYin.entitlements; sourceTree = "<group>"; };
@@ -58,7 +56,6 @@
 			children = (
 				D83C2A19296C863500697CA3 /* CpuUsage.swift */,
 				D828C8D9296C25930017BF51 /* ZhiYinApp.swift */,
-				D828C8DB296C25930017BF51 /* ContentView.swift */,
 				D83C2A17296C860900697CA3 /* ZYView.swift */,
 				D828C8DD296C25940017BF51 /* Assets.xcassets */,
 				D828C8E2296C25940017BF51 /* ZhiYin.entitlements */,
@@ -145,7 +142,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D828C8DC296C25930017BF51 /* ContentView.swift in Sources */,
 				D828C8DA296C25930017BF51 /* ZhiYinApp.swift in Sources */,
 				D83C2A1A296C863500697CA3 /* CpuUsage.swift in Sources */,
 				D83C2A18296C860900697CA3 /* ZYView.swift in Sources */,
@@ -278,7 +274,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ZhiYin/Preview Content\"";
-				DEVELOPMENT_TEAM = 4Y7X2393Y7;
+				DEVELOPMENT_TEAM = 25LKBCVZX2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -306,7 +302,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ZhiYin/Preview Content\"";
-				DEVELOPMENT_TEAM = 4Y7X2393Y7;
+				DEVELOPMENT_TEAM = 25LKBCVZX2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

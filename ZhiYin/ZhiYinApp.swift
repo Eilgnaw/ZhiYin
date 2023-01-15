@@ -3,7 +3,7 @@
 //  ZhiYin
 //
 //  Created by 王小劣 on 2023/1/9.
-//
+//  Collaborator: W-Mai
 
 import SwiftUI
 
@@ -20,7 +20,7 @@ struct ZhiYinApp: App {
 import AppKit
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusBarItem: NSStatusItem?
-
+    
     @objc func exitApp() {
         NSApplication.shared.terminate(nil)
     }
@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menuItem.action = #selector(exitApp)
         let menu = NSMenu()
         menu.addItem(menuItem)
-
+        
         let contentView = ZYView()
         let mainView = NSHostingView(rootView: contentView)
         mainView.frame = NSRect(x: 0, y: 0, width: 22, height: 22)
