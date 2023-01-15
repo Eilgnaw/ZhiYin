@@ -29,6 +29,7 @@ struct ZYView: View {
     
     @AppStorage("AutoReverse") private var autoReverse = true
     @AppStorage("CurrentImageSet") private var currentImageSet = 0
+    @AppStorage("PlaySpeed") private var playSpeed = 0.5
     @State var imageName = "ZhiyinDefault"
     
     @State var direction = 1
@@ -43,7 +44,8 @@ struct ZYView: View {
     }
     
     var body: some View {
-        let timer = Timer.publish(every: TimeInterval(((1.0001 - cpuInfo.cuse) / 10)), on: .main, in: .common).autoconnect()
+        let timer = Timer.publish(every: TimeInterval(((1.0001 - Double(cpuInfo.cuse)) / 5 * (1.1 - playSpeed))),
+                                  on: .main, in: .common).autoconnect()
         VStack {
             AutoInvertImage(name: imageName).frame(width: width, height: height)
         }.onReceive(timer) { _ in

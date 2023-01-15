@@ -18,6 +18,7 @@ struct SettingsView: View {
     @AppStorage("AutoReverse") private var autoReverse = true
     @AppStorage("CurrentImageSet") private var currentImageSet = 0
     @AppStorage("ThemeMode") private var themeMode = 0
+    @AppStorage("PlaySpeed") private var playSpeed = 0.5
     
     var body: some View {
         TabView {
@@ -41,6 +42,10 @@ struct SettingsView: View {
                             }
                         }
                     }.frame(width: 200)
+                    HStack {
+                        Text("只因速")
+                        Slider(value: $playSpeed)
+                    }
                 }
             }
             .frame(width: 300, height: 300)
