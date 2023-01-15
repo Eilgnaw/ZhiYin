@@ -16,7 +16,7 @@ struct ZYView: View {
     let imageNum = 17
 
     var body: some View {
-        let timer = Timer.publish(every: TimeInterval(cpuInfo.cuse), on: .main, in: .common).autoconnect()
+        let timer = Timer.publish(every: TimeInterval((1 - cpuInfo.cuse) / 10), on: .main, in: .common).autoconnect()
         VStack {
             Image(imageName)
                 .resizable()
