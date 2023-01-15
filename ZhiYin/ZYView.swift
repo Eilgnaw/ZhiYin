@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct AutoInvertImage: View {
-    
     @Environment(\.colorScheme) var currentMode
+    @AppStorage("ThemeMode") private var themeMode = 0
     var name: String
     
     var body: some View {
         VStack {
-            if currentMode == .dark {
+            if themeMode == 1 || themeMode == 2 && currentMode == .dark {
                 Image(name).resizable().colorInvert()
             } else {
                 Image(name).resizable()
