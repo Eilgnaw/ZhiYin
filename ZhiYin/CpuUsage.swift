@@ -3,7 +3,7 @@
 //  ZhiYin
 //
 //  Created by 王小劣 on 2023/1/10.
-//
+//  Collaborator: W-Mai
 
 import Foundation
 // CPU usage credit VenoMKO: https://stackoverflow.com/a/6795612/1033581
