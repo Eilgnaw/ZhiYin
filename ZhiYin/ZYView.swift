@@ -8,52 +8,67 @@
 
 import SwiftUI
 
-struct ZYView: View {
+struct AutoInvertImage: View {
     @Environment(\.colorScheme) var currentMode
+    @AppStorage("ThemeMode") private var themeMode = 0
+    var name: String
+    
+    var body: some View {
+        VStack {
+            if themeMode == 1 || themeMode == 2 && currentMode == .dark {
+                Image(name).resizable().colorInvert()
+            } else {
+                Image(name).resizable()
+            }
+        }
+    }
+}
+
+struct ZYView: View {
     @StateObject var cpuInfo = CpuUsage()
     
-    // TODO: 未来增加设置，控制这些值
-    @State var autoReverse = true
-    @State var imageSetName = "zhiyin"
-    @State var imageName = ""
-    @State var imageNum = 17
+    @AppStorage("AutoReverse") private var autoReverse = true
+    @AppStorage("CurrentImageSet") private var currentImageSet = 0
+    @AppStorage("PlaySpeed") private var playSpeed = 0.5
+    @State var imageName = "ZhiyinDefault"
     
     @State var direction = 1
     @State var imageIndex = 0
     
+    @State var width: CGFloat
+    @State var height: CGFloat
+    
+    init(width:CGFloat, height: CGFloat ) {
+        self.width = width
+        self.height = height
+    }
+    
     var body: some View {
-        let timer = Timer.publish(every: TimeInterval((1 - cpuInfo.cuse) / 10), on: .main, in: .common).autoconnect()
+        let timer = Timer.publish(every: TimeInterval(((1.0001 - Double(cpuInfo.cuse)) / 5 * (1.1 - playSpeed))),
+                                  on: .main, in: .common).autoconnect()
         VStack {
-            VStack {
-                if currentMode == .dark {
-                    Image(imageName).resizable().colorInvert()
+            AutoInvertImage(name: imageName).frame(width: width, height: height)
+        }.onReceive(timer) { _ in
+            if imageIndex == 0 {
+                direction = 1
+            }
+            if imageIndex == imageSet[currentImageSet].num - 1 {
+                if autoReverse {
+                    direction = -1
                 } else {
-                    Image(imageName).resizable()
-                }
-            }
-            .frame(width: 22, height: 22)
-            .onReceive(timer) { _ in
-                if imageIndex == 0 {
                     direction = 1
+                    imageIndex = 0
                 }
-                if imageIndex == imageNum - 1 {
-                    if autoReverse {
-                        direction = -1
-                    } else {
-                        direction = 1
-                        imageIndex = 0
-                    }
-                }
-                
-                imageIndex += direction
-                imageName = "\(imageSetName)\(imageIndex)"
             }
+            
+            imageIndex += direction
+            imageName = "\(imageSet[currentImageSet].name)\(imageIndex)"
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ZYView()
+        ZYView(width: 100, height: 100)
     }
 }
