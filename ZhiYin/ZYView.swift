@@ -13,7 +13,7 @@ struct ZYView: View {
     @StateObject var cpuInfo = CpuUsage()
     
     // TODO: 未来增加设置，控制这些值
-    @State var autoReverse = true
+    @AppStorage("AutoReverse") private var autoReverse = true
     @State var imageSetName = "zhiyin"
     @State var imageName = ""
     @State var imageNum = 17
