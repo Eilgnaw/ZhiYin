@@ -12,9 +12,9 @@ struct ZYView: View {
     @State var image = 0
     @State var imageName = "sssss163"
     @State var flag = false
-
+    
     let imageNum = 17
-
+    
     var body: some View {
         let timer = Timer.publish(every: TimeInterval((1 - cpuInfo.cuse) / 10), on: .main, in: .common).autoconnect()
         VStack {
