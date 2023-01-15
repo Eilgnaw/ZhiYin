@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45E8EA262974541E000D163E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8EA252974541E000D163E /* SettingsView.swift */; };
 		D828C8DA296C25930017BF51 /* ZhiYinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D828C8D9296C25930017BF51 /* ZhiYinApp.swift */; };
 		D828C8DE296C25940017BF51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D828C8DD296C25940017BF51 /* Assets.xcassets */; };
 		D828C8E1296C25940017BF51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D828C8E0296C25940017BF51 /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45E8EA252974541E000D163E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D828C8D6296C25930017BF51 /* ZhiYin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZhiYin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D828C8D9296C25930017BF51 /* ZhiYinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZhiYinApp.swift; sourceTree = "<group>"; };
 		D828C8DD296C25940017BF51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		D828C8D8296C25930017BF51 /* ZhiYin */ = {
 			isa = PBXGroup;
 			children = (
+				45E8EA252974541E000D163E /* SettingsView.swift */,
 				D83C2A19296C863500697CA3 /* CpuUsage.swift */,
 				D828C8D9296C25930017BF51 /* ZhiYinApp.swift */,
 				D83C2A17296C860900697CA3 /* ZYView.swift */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D828C8DA296C25930017BF51 /* ZhiYinApp.swift in Sources */,
+				45E8EA262974541E000D163E /* SettingsView.swift in Sources */,
 				D83C2A1A296C863500697CA3 /* CpuUsage.swift in Sources */,
 				D83C2A18296C860900697CA3 /* ZYView.swift in Sources */,
 			);
