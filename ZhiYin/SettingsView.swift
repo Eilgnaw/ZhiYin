@@ -65,7 +65,7 @@ struct SettingsView: View {
                     Text("🐔🫵🏻🌞🈚️")
                         .font(.system(size: 100)).multilineTextAlignment(.center)
                 }.onTapGesture {
-                    NSWorkspace.shared.open(URL(string:"https://github.com/W-Mai/ZhiYin")!)
+                    NSWorkspace.shared.open(URL(string:"https://github.com/W-Mai/BuZhiYin")!)
                 }
                 
             }.frame(width: 300, height: 300)
