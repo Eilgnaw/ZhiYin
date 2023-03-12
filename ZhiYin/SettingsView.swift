@@ -7,15 +7,23 @@
 
 import SwiftUI
 
+enum NeedInvert: Int {
+    case no =  0
+    case yes = 1
+}
+
 struct ImageSetInfo: Identifiable {
-    var id:   Int
-    var name: String
-    var num:  Int
-    var desp: String
+    var id:     Int
+    var light:  NeedInvert = .no
+    var dark:   NeedInvert = .no
+    var name:   String
+    var num:    Int
+    var desp:   String
 }
 
 struct SettingsView: View {
     @AppStorage("AutoReverse") private var autoReverse = true
+    @AppStorage("SpeedProportional") private var speedProportional = true
     @AppStorage("CurrentImageSet") private var currentImageSet = 0
     @AppStorage("ThemeMode") private var themeMode = 0
     @AppStorage("PlaySpeed") private var playSpeed = 0.5
@@ -35,6 +43,7 @@ struct SettingsView: View {
                         Text("跟随系统").tag(2)
                     }
                     Toggle("自动反转播放", isOn: $autoReverse).toggleStyle(.switch)
+                    Toggle("速度正比于CPU占用", isOn: $speedProportional).toggleStyle(.switch)
                     HStack {
                         Picker(selection: $currentImageSet, label: Text("图集")) {
                             ForEach(imageSet) {item in
@@ -48,7 +57,7 @@ struct SettingsView: View {
                     }
                 }
             }
-            .frame(width: 300, height: 300)
+            .frame(width: 300, height: 350)
             .tabItem {Label("通用", systemImage: "gear")}
             
             Form {
@@ -56,7 +65,7 @@ struct SettingsView: View {
                     Text("🐔🫵🏻🌞🈚️")
                         .font(.system(size: 100)).multilineTextAlignment(.center)
                 }.onTapGesture {
-                    NSWorkspace.shared.open(URL(string:"https://github.com/Eilgnaw/ZhiYin")!)
+                    NSWorkspace.shared.open(URL(string:"https://github.com/W-Mai/BuZhiYin")!)
                 }
                 
             }.frame(width: 300, height: 300)
